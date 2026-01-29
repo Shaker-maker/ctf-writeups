@@ -4,44 +4,40 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 
 ## 📊 Stats
 
-- **Total Challenges Solved:** 1
+- **Total Challenges Solved:** 2
 - **Platforms:** CyberTalents, PicoCTF, PortSwigger
 - **Categories:** Web, Crypto, Forensics, PWN, Reverse Engineering
 
 ## 🗂️ Repository Structure
 
-```
-ctf-writeups/
-├── cybertalents/
-│   ├── web/
-│   ├── crypto/
-│   ├── forensics/
-│   └── reverse/
-├── picoctf/
-│   ├── web/
-│   ├── crypto/
-│   └── binary/
-├── portswigger/
-│   ├── sql-injection/
-│   ├── xss/
-│   ├── csrf/
-│   └── authentication/
-├── cheatsheets/
-│   ├── lfi-techniques.md
-│   ├── sql-injection.md
-│   ├── xss-payloads.md
-│   └── useful-commands.md
-└── templates/
-    └── writeup-template.md
-```
+### CyberTalents
+- **web/** - Web exploitation challenges
+- **crypto/** - Cryptography challenges  
+- **forensics/** - Digital forensics challenges
+- **reverse/** - Reverse engineering challenges
+
+### PicoCTF
+- **web/** - Web security challenges
+- **crypto/** - Cryptography puzzles
+- **binary/** - Binary exploitation
+
+### PortSwigger
+- **sql-injection/** - SQL injection labs
+- **xss/** - Cross-site scripting labs
+- **csrf/** - CSRF vulnerabilities
+- **authentication/** - Auth bypass techniques
+
+### Resources
+- **cheatsheets/** - Quick reference guides
+- **templates/** - Writeup templates
 
 ## 📝 Recent Writeups
 
 ### CyberTalents
-- [Dark Project (100 pts) - Web/LFI](cybertalents/web/dark-project.md) ⭐ NEW
+- [Dark Project (100 pts) - Web/LFI](cybertalents/web/dark-project.md)
 
 ### PicoCTF
-- Coming soon...
+- [Server-Side Template Injection - Web/SSTI](picoctf/web/ssti-challenge.md) ⭐ NEW
 
 ### PortSwigger
 - Coming soon...
@@ -50,6 +46,7 @@ ctf-writeups/
 
 ### Web Exploitation
 - Local File Inclusion (LFI)
+- Server-Side Template Injection (SSTI)
 - SQL Injection
 - Cross-Site Scripting (XSS)
 - Authentication Bypass
@@ -63,7 +60,13 @@ ctf-writeups/
 ### Reverse Engineering
 - Coming soon...
 
-## 🛠️ Tools & Resources
+## 🔗 Learning Resources
+
+### Documentation & Guides
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
+- [HackTricks](https://book.hacktricks.xyz/)
+- [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
+- [PortSwigger Web Security Academy](https://portswigger.net/web-security)
 
 ### Essential Tools
 - **Burp Suite** - Web vulnerability scanner
@@ -72,15 +75,10 @@ ctf-writeups/
 - **John the Ripper** - Password cracking
 - **CyberChef** - Data analysis and encoding
 
-### Learning Resources
-- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-- [HackTricks](https://book.hacktricks.xyz/)
-- [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
-- [PortSwigger Web Security Academy](https://portswigger.net/web-security)
-
 ## 📚 Cheat Sheets
 
 - [LFI Exploitation Techniques](cheatsheets/lfi-techniques.md)
+- [SSTI (Server-Side Template Injection)](cheatsheets/ssti-techniques.md)
 - [SQL Injection Payloads](cheatsheets/sql-injection.md)
 - [XSS Filter Bypasses](cheatsheets/xss-payloads.md)
 - [Useful Linux Commands](cheatsheets/useful-commands.md)
@@ -99,9 +97,9 @@ These writeups are for **educational purposes only**. All challenges were comple
 
 ## 📫 Contact
 
-- GitHub: [@Shaker-maker](https://github.com/Shaker-maker)
-- LinkedIn: [Alvin Wainaina](https://linkedin.com/in/yourprofile)
-- Twitter: [@Wainaina1Alvin](https://twitter.com/yourhandle)
+**GitHub:** [@Shaker-maker](https://github.com/Shaker-maker)  
+**LinkedIn:** [Alvin Wainaina](https://linkedin.com/in/yourprofile)  
+**Twitter:** [@Wainaina1Alvin](https://twitter.com/Wainaina1Alvin)
 
 ## 📄 License
 
@@ -109,4 +107,4 @@ This repository is licensed under the MIT License - see the [LICENSE](LICENSE) f
 
 ---
 
-**Last Updated:** December 14, 2024
+**Last Updated:** December 29, 2026 (2 challenges solved)
