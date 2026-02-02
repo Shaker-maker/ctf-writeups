@@ -4,7 +4,7 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 
 ## 📊 Stats
 
-- **Total Challenges Solved:** 2
+- **Total Challenges Solved:** 3
 - **Platforms:** CyberTalents, PicoCTF, PortSwigger
 - **Categories:** Web, Crypto, Forensics, PWN, Reverse Engineering
 
@@ -37,7 +37,8 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 - [Dark Project (100 pts) - Web/LFI](cybertalents/web/dark-project.md)
 
 ### PicoCTF
-- [Server-Side Template Injection - Web/SSTI](picoctf/web/ssti-challenge.md) ⭐ NEW
+- [Cookie Monster - Web/Cookies](picoctf/web/cookie-monster.md) ⭐ NEW
+- [Server-Side Template Injection - Web/SSTI](picoctf/web/ssti-challenge.md)
 
 ### PortSwigger
 - Coming soon...
@@ -47,6 +48,7 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 ### Web Exploitation
 - Local File Inclusion (LFI)
 - Server-Side Template Injection (SSTI)
+- Cookie Manipulation
 - SQL Injection
 - Cross-Site Scripting (XSS)
 - Authentication Bypass
@@ -79,6 +81,7 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 
 - [LFI Exploitation Techniques](cheatsheets/lfi-techniques.md)
 - [SSTI (Server-Side Template Injection)](cheatsheets/ssti-techniques.md)
+- [Cookie Manipulation & Exploitation](cheatsheets/cookie-manipulation.md)
 - [SQL Injection Payloads](cheatsheets/sql-injection.md)
 - [XSS Filter Bypasses](cheatsheets/xss-payloads.md)
 - [Useful Linux Commands](cheatsheets/useful-commands.md)
@@ -107,4 +110,4 @@ This repository is licensed under the MIT License - see the [LICENSE](LICENSE) f
 
 ---
 
-**Last Updated:** December 29, 2026 (2 challenges solved)
+**Last Updated:** February 2, 2026 (3 challenges solved - on fire! 🔥)
