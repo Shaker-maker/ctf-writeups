@@ -4,9 +4,9 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 
 ## 📊 Stats
 
-- **Total Challenges Solved:** 3
+- **Total Challenges Solved:** 4
 - **Platforms:** CyberTalents, PicoCTF, PortSwigger
-- **Categories:** Web, Crypto, Forensics, PWN, Reverse Engineering
+- **Categories:** Web Exploitation, Forensics, Crypto, PWN, Reverse Engineering
 
 ## 🗂️ Repository Structure
 
@@ -37,7 +37,8 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 - [Dark Project (100 pts) - Web/LFI](cybertalents/web/dark-project.md)
 
 ### PicoCTF
-- [Cookie Monster - Web/Cookies](picoctf/web/cookie-monster.md) ⭐ NEW
+- [File Corruption - Forensics/Magic Bytes](picoctf/forensics/file-corruption.md) ⭐ NEW
+- [Cookie Monster - Web/Cookies](picoctf/web/cookie-monster.md)
 - [Server-Side Template Injection - Web/SSTI](picoctf/web/ssti-challenge.md)
 
 ### PortSwigger
@@ -49,14 +50,22 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 - Local File Inclusion (LFI)
 - Server-Side Template Injection (SSTI)
 - Cookie Manipulation
+- File Upload Bypass (In Progress)
 - SQL Injection
 - Cross-Site Scripting (XSS)
 - Authentication Bypass
 
+### Forensics
+- File Signature Analysis
+- Magic Bytes Repair
+- Hex Editing
+- Steganography
+- Metadata Extraction
+
 ### Cryptography
 - Coming soon...
 
-### Forensics
+### Binary Exploitation
 - Coming soon...
 
 ### Reverse Engineering
@@ -79,20 +88,41 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 
 ## 📚 Cheat Sheets
 
+### Web Exploitation
 - [LFI Exploitation Techniques](cheatsheets/lfi-techniques.md)
 - [SSTI (Server-Side Template Injection)](cheatsheets/ssti-techniques.md)
 - [Cookie Manipulation & Exploitation](cheatsheets/cookie-manipulation.md)
 - [SQL Injection Payloads](cheatsheets/sql-injection.md)
 - [XSS Filter Bypasses](cheatsheets/xss-payloads.md)
+
+### Forensics
+- [Digital Forensics & File Analysis](cheatsheets/forensics-techniques.md)
+- [File Signatures Reference](cheatsheets/file-signatures.md)
+
+### General
 - [Useful Linux Commands](cheatsheets/useful-commands.md)
 
 ## 🎓 Skills Developed
 
-- Web Application Security Testing
-- Vulnerability Analysis
-- Exploit Development
-- Security Research
-- Documentation & Technical Writing
+### Web Application Security
+- Local File Inclusion (LFI) exploitation
+- Server-Side Template Injection (SSTI)
+- Cookie manipulation and analysis
+- File upload bypass techniques
+- PHP wrapper exploitation
+
+### Forensics & Analysis
+- File signature identification
+- Hex editing and binary analysis
+- Magic bytes repair
+- Metadata extraction
+- File carving techniques
+
+### General Security
+- Vulnerability identification
+- Exploit development
+- Security research
+- Documentation & technical writing
 
 ## ⚠️ Disclaimer
 
@@ -110,4 +140,10 @@ This repository is licensed under the MIT License - see the [LICENSE](LICENSE) f
 
 ---
 
-**Last Updated:** February 2, 2026 (3 challenges solved - on fire! 🔥)
+**Last Updated:** February 9, 2026
+
+**Today's Achievement:** 🔥 4 challenges solved! 🔥
+- ✅ Web Exploitation: 3 challenges
+- ✅ Forensics: 1 challenge
+- ✅ Total writeups: 4
+- ✅ Cheat sheets created: 4
