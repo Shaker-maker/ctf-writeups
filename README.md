@@ -4,9 +4,9 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 
 ## 📊 Stats
 
-- **Total Challenges Solved:** 4
-- **Platforms:** CyberTalents, PicoCTF, PortSwigger
-- **Categories:** Web Exploitation, Forensics, Crypto, PWN, Reverse Engineering
+- **Total Challenges Solved:** 5
+- **Platforms:** CyberTalents, PicoCTF, HackerBox Labs
+- **Categories:** Web Exploitation, Forensics, Exploitation, Crypto, Reverse Engineering
 
 ## 🗂️ Repository Structure
 
@@ -30,14 +30,18 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 ### Resources
 - **cheatsheets/** - Quick reference guides
 - **templates/** - Writeup templates
+- **hackerbox/** - HackerBox Labs challenges
 
 ## 📝 Recent Writeups
+
+### HackerBox Labs
+- [SambaCry CVE-2017-7494 - Exploitation/RCE](hackerbox/exploitation/sambacry-cve-2017-7494.md) ⭐ NEW
 
 ### CyberTalents
 - [Dark Project (100 pts) - Web/LFI](cybertalents/web/dark-project.md)
 
 ### PicoCTF
-- [File Corruption - Forensics/Magic Bytes](picoctf/forensics/file-corruption.md) ⭐ NEW
+- [File Corruption - Forensics/Magic Bytes](picoctf/forensics/file-corruption.md)
 - [Cookie Monster - Web/Cookies](picoctf/web/cookie-monster.md)
 - [Server-Side Template Injection - Web/SSTI](picoctf/web/ssti-challenge.md)
 
@@ -55,6 +59,13 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 - Cross-Site Scripting (XSS)
 - Authentication Bypass
 
+### Exploitation & Binary
+- Remote Code Execution (RCE)
+- CVE Exploitation (SambaCry)
+- Metasploit Framework
+- Network Service Exploitation
+- Privilege Escalation
+
 ### Forensics
 - File Signature Analysis
 - Magic Bytes Repair
@@ -63,9 +74,6 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 - Metadata Extraction
 
 ### Cryptography
-- Coming soon...
-
-### Binary Exploitation
 - Coming soon...
 
 ### Reverse Engineering
@@ -110,6 +118,15 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 - Cookie manipulation and analysis
 - File upload bypass techniques
 - PHP wrapper exploitation
+- Log poisoning attacks
+
+### Exploitation & Binary Analysis
+- CVE research and exploitation
+- Metasploit Framework proficiency
+- Network service exploitation
+- Remote Code Execution (RCE)
+- Privilege escalation techniques
+- Reverse shell establishment
 
 ### Forensics & Analysis
 - File signature identification
@@ -123,6 +140,7 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 - Exploit development
 - Security research
 - Documentation & technical writing
+- Network reconnaissance
 
 ## ⚠️ Disclaimer
 
@@ -140,10 +158,12 @@ This repository is licensed under the MIT License - see the [LICENSE](LICENSE) f
 
 ---
 
-**Last Updated:** February 9, 2026
+**Last Updated:** March 19, 2026
 
-**Today's Achievement:** 🔥 4 challenges solved! 🔥
+**Today's Achievement:** 🔥 5 challenges solved! 🔥
 - ✅ Web Exploitation: 3 challenges
 - ✅ Forensics: 1 challenge
-- ✅ Total writeups: 4
+- ✅ Exploitation/RCE: 1 challenge
+- ✅ Total writeups: 5
 - ✅ Cheat sheets created: 4
+- ✅ Platforms mastered: 3 (CyberTalents, PicoCTF, HackerBox)
