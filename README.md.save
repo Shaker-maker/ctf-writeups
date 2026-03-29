@@ -1,10 +1,10 @@
-# CTF Writeups & Security Labs
+T# CTF Writeups & Security Labs
 
 My personal collection of Capture The Flag (CTF) writeups and security challenge solutions. This repository documents my journey learning cybersecurity through hands-on practice.
 
 ## 📊 Stats
 
-- **Total Challenges Solved:** 6
+- **Total Challenges Solved:** 5
 - **Platforms:** CyberTalents, PicoCTF, HackerBox Labs
 - **Categories:** Web Exploitation, Forensics, Exploitation, Crypto, Reverse Engineering
 
@@ -34,17 +34,16 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 
 ## 📝 Recent Writeups
 
-### PicoCTF
-- [Old Sessions - Web/Session Hijacking](picoctf/web/old-sessions.md) ⭐ NEW
-- [File Corruption - Forensics/Magic Bytes](picoctf/forensics/file-corruption.md)
-- [Cookie Monster - Web/Cookies](picoctf/web/cookie-monster.md)
-- [Server-Side Template Injection - Web/SSTI](picoctf/web/ssti-challenge.md)
-
 ### HackerBox Labs
-- [SambaCry CVE-2017-7494 - Exploitation/RCE](hackerbox/exploitation/sambacry-cve-2017-7494.md)
+- [SambaCry CVE-2017-7494 - Exploitation/RCE](hackerbox/exploitation/sambacry-cve-2017-7494.md) ⭐ NEW
 
 ### CyberTalents
 - [Dark Project (100 pts) - Web/LFI](cybertalents/web/dark-project.md)
+
+### PicoCTF
+- [File Corruption - Forensics/Magic Bytes](picoctf/forensics/file-corruption.md)
+- [Cookie Monster - Web/Cookies](picoctf/web/cookie-monster.md)
+- [Server-Side Template Injection - Web/SSTI](picoctf/web/ssti-challenge.md)
 
 ### PortSwigger
 - Coming soon...
@@ -55,8 +54,6 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 - Local File Inclusion (LFI)
 - Server-Side Template Injection (SSTI)
 - Cookie Manipulation
-- Session Hijacking
-- Broken Session Management
 - File Upload Bypass (In Progress)
 - SQL Injection
 - Cross-Site Scripting (XSS)
@@ -119,8 +116,6 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 - Local File Inclusion (LFI) exploitation
 - Server-Side Template Injection (SSTI)
 - Cookie manipulation and analysis
-- Session hijacking and management
-- Broken authentication exploitation
 - File upload bypass techniques
 - PHP wrapper exploitation
 - Log poisoning attacks
@@ -163,12 +158,12 @@ This repository is licensed under the MIT License - see the [LICENSE](LICENSE) f
 
 ---
 
-**Last Updated:** March 29, 2026
+**Last Updated:** March 19, 2026
 
-**Latest Achievement:** 🔥 6 challenges solved! 🔥
-- ✅ Web Exploitation: 4 challenges
+**Today's Achievement:** 🔥 5 challenges solved! 🔥
+- ✅ Web Exploitation: 3 challenges
 - ✅ Forensics: 1 challenge
 - ✅ Exploitation/RCE: 1 challenge
-- ✅ Total writeups: 6
+- ✅ Total writeups: 5
 - ✅ Cheat sheets created: 4
 - ✅ Platforms mastered: 3 (CyberTalents, PicoCTF, HackerBox)

