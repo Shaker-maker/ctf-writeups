@@ -4,9 +4,9 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 
 ## 📊 Stats
 
-- **Total Challenges Solved:** 6
+- **Total Challenges Solved:** 7
 - **Platforms:** CyberTalents, PicoCTF, HackerBox Labs
-- **Categories:** Web Exploitation, Forensics, Exploitation, Crypto, Reverse Engineering
+- **Categories:** Web Exploitation, Forensics, Exploitation, API Security
 
 ## 🗂️ Repository Structure
 
@@ -35,7 +35,8 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 ## 📝 Recent Writeups
 
 ### PicoCTF
-- [Old Sessions - Web/Session Hijacking](picoctf/web/old-sessions.md) ⭐ NEW
+- [head-dump - Web/API Security](picoctf/web/head-dump.md) ⭐ NEW
+- [Old Sessions - Web/Session Hijacking](picoctf/web/old-sessions.md)
 - [File Corruption - Forensics/Magic Bytes](picoctf/forensics/file-corruption.md)
 - [Cookie Monster - Web/Cookies](picoctf/web/cookie-monster.md)
 - [Server-Side Template Injection - Web/SSTI](picoctf/web/ssti-challenge.md)
@@ -57,6 +58,9 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 - Cookie Manipulation
 - Session Hijacking
 - Broken Session Management
+- API Security & Swagger
+- Heap Dump Analysis
+- Information Disclosure
 - File Upload Bypass (In Progress)
 - SQL Injection
 - Cross-Site Scripting (XSS)
@@ -121,6 +125,9 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 - Cookie manipulation and analysis
 - Session hijacking and management
 - Broken authentication exploitation
+- API security (Swagger/OpenAPI)
+- Heap dump analysis and memory forensics
+- Information disclosure vulnerabilities
 - File upload bypass techniques
 - PHP wrapper exploitation
 - Log poisoning attacks
@@ -165,10 +172,10 @@ This repository is licensed under the MIT License - see the [LICENSE](LICENSE) f
 
 **Last Updated:** March 29, 2026
 
-**Latest Achievement:** 🔥 6 challenges solved! 🔥
-- ✅ Web Exploitation: 4 challenges
+**Latest Achievement:** 🔥 7 challenges solved! 🔥
+- ✅ Web Exploitation: 5 challenges
 - ✅ Forensics: 1 challenge
 - ✅ Exploitation/RCE: 1 challenge
-- ✅ Total writeups: 6
+- ✅ Total writeups: 7
 - ✅ Cheat sheets created: 4
 - ✅ Platforms mastered: 3 (CyberTalents, PicoCTF, HackerBox)
