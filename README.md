@@ -39,6 +39,8 @@ My personal collection of Capture The Flag (CTF) writeups and security challenge
 - [Cookie Monster - Web/Cookies](picoctf/web/cookie-monster.md)
 - [Server-Side Template Injection - Web/SSTI](picoctf/web/ssti-challenge.md)
 - [Timeline Forensics 1 - Disk Analysis](picoctf/forensics/timeline.md)
+- [Rogue Tower - IMSI Forensics ](picoctf/forensics/rogue_tower.md)
+
 ### HackerBox Labs
 - [SambaCry CVE-2017-7494 - Exploitation/RCE](hackerbox/exploitation/sambacry-cve-2017-7494.md)
 
